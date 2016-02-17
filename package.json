@@ -1,5 +1,5 @@
 {
-  "name": "injectify-hot",
+  "name": "handlebars-hot-loader",
   "version": "0.0.1",
   "description": "Hot module reload for Handlebars templates",
   "main": "index.js",
@@ -10,22 +10,25 @@
     "type": "git",
     "url": "git+https://github.com/just-boris/injectify-hot.git"
   },
-  "peerDependencies": {
-      "injectify": "^2.0.0"
-  },
   "keywords": [
-      "handlebars",
-      "injectify",
-      "webpack",
-      "hmr",
-      "live",
-      "hot",
-      "reload"
+    "handlebars",
+    "injectify",
+    "webpack",
+    "hmr",
+    "live",
+    "hot",
+    "reload"
   ],
   "author": "Boris Serdiuk <just-boris@hotmail.com>",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/just-boris/injectify-hot/issues"
   },
-  "homepage": "https://github.com/just-boris/injectify-hot#readme"
+  "homepage": "https://github.com/just-boris/injectify-hot#readme",
+  "peerDependencies": {
+      "regions-extras": "^2.1.2"
+  },
+  "dependencies": {
+    "loader-utils": "^0.2.12"
+  }
 }

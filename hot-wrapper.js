@@ -1,5 +1,5 @@
 module.exports = function() {
-    var utils = require('injectify/utils');
+    var utils = require('regions-extras');
     var template = require('__PATH__');
     var renderedViews = [];
 
@@ -11,8 +11,9 @@ module.exports = function() {
             });
         });
     }
-    return function(hash, options) {
-        var view = utils.extractView(null, hash, options);
+    return function(data, options) {
+        options.hash = options.hash || {};
+        var view = utils.getView(null, options);
         view.on('render', function() {
             renderedViews.push(view);
         });
