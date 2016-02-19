@@ -26,7 +26,7 @@ module: {
   loaders: [
     {
       test: /\.hbs/,
-      loader: 'handlebars-hotloader!handlebars'
+      loader: 'handlebars-hot!handlebars'
     }
   ]
 },
