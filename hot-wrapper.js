@@ -12,16 +12,21 @@ module.exports = function() {
         });
     }
     return function(data, options) {
-        options.hash = options.hash || {};
-        var view = utils.getView(null, options);
-        view.on('render', function() {
-            renderedViews.push(view);
-        });
-        view.on('destroy', function() {
-            renderedViews = renderedViews.filter(function(item) {
-                return item !== view;
+        var view;
+        if(options) {
+            options.hash = options.hash || {};
+            view = utils.getView(null, options)
+        }
+        if(view) {
+            view.on('render', function() {
+                renderedViews.push(view);
             });
-        });
+            view.on('destroy', function() {
+                renderedViews = renderedViews.filter(function(item) {
+                    return item !== view;
+                });
+            });
+        }
         return template.apply(null, arguments);
     };
 };
