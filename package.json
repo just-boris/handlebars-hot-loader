@@ -1,6 +1,6 @@
 {
   "name": "handlebars-hot-loader",
-  "version": "0.0.1",
+  "version": "0.0.2",
   "description": "Hot module reload for Handlebars templates",
   "main": "index.js",
   "scripts": {
@@ -26,7 +26,7 @@
   },
   "homepage": "https://github.com/just-boris/injectify-hot#readme",
   "peerDependencies": {
-      "regions-extras": "^2.1.2"
+    "regions-extras": "^2.1.2"
   },
   "dependencies": {
     "loader-utils": "^0.2.12"
